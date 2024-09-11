@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, initial-scale=1"/>
+		<title>The Terrible Tasks!</title>
+		<link rel="stylesheet" href="style.css"/>
+		<link rel="icon" href="icon.svg"/>
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div id="header">The Terrible Tasks!</div>
+		<div id="failScreen" class="hide">
+			YOU FAILED!
+			<br>
+			<button id="retryButton">Retry?</button>
+		</div>
+		<div id="tasks"></div>
+		<div id="userArea">
+			<span>Mistakes: <text id="mistakes">0</text>/3</span>
+			<br>
+			<input id="input" style="font-size:1.6rem">
+			<button id="submit" class="button">Sumbit!</button>
+		</div>
+	</body>
+</html>

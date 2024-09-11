@@ -1,0 +1,227 @@
+* {
+	font-family: sans-serif;
+}
+
+html {
+	font-size: 16px
+}
+
+body {
+	overflow: hidden;
+}
+
+button {
+	font-size: 1.6rem;
+}
+
+.button {
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 4px;
+	color: black;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: #DDD;
+}
+
+.invert {
+	background-color: black;
+	border: 2px solid black;
+	border-radius: 4px;
+	color: white;
+	cursor: pointer
+}
+
+.invert:hover {
+	background-color: #444;
+	border: 2px solid black;
+	border-radius: 4px;
+	color: white;
+	cursor: pointer
+}
+
+#chargeButton {
+	background-color: transparent;
+	border: 2px solid #BBBB00;
+	border-radius: 4px;
+	color: #BBBB00;
+	cursor: pointer
+}
+
+#chargeButton:hover {
+	background-color: rgba(255, 255, 0, 0.1);
+}
+
+#header {
+	position: absolute;
+	font-size: 3.2rem;
+	font-weight: bold;
+	top: 0px;
+	left: 8px;
+	right: 8px;
+}
+
+@media (max-height: 30rem) or (max-width: 30rem) {
+	#tasks {
+		top: 8px !important
+	}
+	
+	#header {
+		opacity: 0.05;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		pointer-events: none;
+	}
+}
+
+@media (max-height: 30rem) {
+	#mechanics {
+		position: absolute;
+		right: 0px
+	}
+	
+	#tasks {
+		right: calc(12rem + 128px) !important;
+		bottom: 160px !important
+	}
+}
+
+#tasks {
+	position: absolute;
+	top: 4rem;
+	bottom: 316px;
+	left: 8px;
+	right: 8px;
+	overflow-y: scroll;
+	font-size: 1.6rem
+}
+
+#mechanics {
+	position: absolute;
+	bottom: 156px;
+}
+
+#userArea {
+	clear: left;
+	position: absolute;
+	bottom: 8px;
+	font-size: 1.6rem
+}
+
+#input {
+	border: 2px solid black;
+	border-radius: 4px;
+	padding: 2px;
+	width: calc(100vw - 8rem);
+	min-width: 9rem
+}
+
+.taskState {
+	font-size: 1.25rem;
+	font-weight: bold
+}
+
+.square {
+	border: 2px solid;
+	text-align: center;
+	font-weight: bold;
+}
+
+.box {
+	display: inline-block;
+	width: 1.6rem;
+	height: 1.6rem;
+}
+
+.red {
+	background-color: red;
+	color: red;
+}
+
+.green {
+	background-color: #00dd00;
+	color: #00dd00;
+}
+
+.blue {
+	background-color: blue;
+	color: blue;
+}
+
+.yellow {
+	background-color: yellow;
+	color: yellow;
+}
+
+#submit {
+	margin-bottom: 8px;
+}
+
+#failScreen {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+	margin: auto;
+	color: #b00;
+	font-size: 8rem;
+	font-weight: bold;
+	text-align: center;
+	z-index: 99;
+}
+
+#failScreen::selection {
+	background-color: #b00;
+	color: white;
+}
+
+#retryButton {
+	background-color: transparent;
+	border: 4px solid #b00;
+	border-radius: 8px;
+	color: #b00;
+	cursor: pointer;
+	font-size: 3.2rem
+}
+
+#retryButton:hover {
+	background-color: #b00;
+	color: white;
+}
+
+::selection {
+	background-color: #0076d7;
+	color: white;
+}
+
+#tasks > div:nth-child(n + 90)::selection, #tasks > div:nth-child(n + 90) > span::selection {
+	background-color: #d60000;
+	color: white;
+}
+
+@keyframes final {
+	from {
+		color: #b00;
+	}
+	
+	50% {
+		color: #b00;
+	}
+	
+	to {
+		color: #ea0;
+	}
+}
+
+.hide {
+	/* https://www.w3schools.com/howto/howto_css_disable_text_selection.asp */
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+	display: none
+}
