@@ -3093,7 +3093,7 @@ document.addEventListener("mousemove", event => {
 
 updateInterval()
 
-window.skipTask = function(){
+let skipTask = () => {
 	alert("Cheater! =(")
 	delete window.skipTask
 	
@@ -3105,16 +3105,6 @@ window.skipTask = function(){
 	})
 }
 
-Object.defineProperty(window, "skipTask", {
-	get: function(){
-		skipTask()
-		return {} = amount => {}
-	},
-	set: function(){
-		skipTask()
-	},
-	configurable: true,
-	enumerable: true,
-})
+window.skipTask = () => skipTask()
 
 }()
