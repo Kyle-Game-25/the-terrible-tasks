@@ -1,6 +1,6 @@
 "use strict";
 
-//void function(){
+void function(){
 
 let cursorX = 0
 let cursorY = 0
@@ -3093,17 +3093,7 @@ document.addEventListener("mousemove", event => {
 
 updateInterval()
 
-window.skipTask = function(amt){
-	for (let i = 0; i < amt; i++) {
-		taskNumber++
-		
-		updateTasks()
-		
-		if (taskList[taskNumber].run) setTimeout(taskList[taskNumber].run)
-	}
-}
-
-/*window.skipTask = function(){
+window.skipTask = function(){
 	alert("Cheater! =(")
 	delete window.skipTask
 	
@@ -3125,6 +3115,6 @@ Object.defineProperty(window, "skipTask", {
 	},
 	configurable: true,
 	enumerable: true,
-})*/
+})
 
-//}()
+}()
