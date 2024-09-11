@@ -768,8 +768,8 @@ const generate = (taskId, seed) => {
 			let amount = 0
 			
 			while (amount < 9) {
-				amount++
 				if (!lowerCase.includes("g")) break
+                amount++
 				lowerCase = lowerCase.slice(lowerCase.indexOf("g") + 1)
 			}
 			
@@ -1037,7 +1037,7 @@ const generate = (taskId, seed) => {
 			
 			for (let index = 0; index < length; index++) {
 				if ((/[a-z]/).test(lowercase[index])) letters++
-				else if (lowercase[index] === "q") amount_q++
+				if (lowercase[index] === "q") amount_q++
 			}
 			
 			return amount_q === letters / 5
@@ -3024,8 +3024,6 @@ if (localStorage.getItem("task-data") !== null) {
 		let data = []
 		
 		Array.from(stored).forEach((character, position) => data[position] = character.charCodeAt(0))
-		
-		console.log(data)
 		
 		taskList = [generate(0)]
 		taskList.push(generate(1, [data[0]]))
