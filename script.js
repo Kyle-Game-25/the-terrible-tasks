@@ -1373,7 +1373,7 @@ const generate = (taskId, seed) => {
 			
 			if (!lowercase.includes(["past", "present", "future"][variations[0]])) return false
 			
-			if (variations[1] === 2 && lowercase.includes("continous") && lowercase.includes("perfect")) return true
+			if (variations[1] === 2 && lowercase.includes("continuous") && lowercase.includes("perfect")) return true
 			return lowercase.includes(["continuous", "perfect"][variations[1]])
 		}
 		
